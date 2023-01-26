@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الكواكب الزاهرة في الأربعين المتواترة</title>
+</head>
+<body>
+  <div id="div" style="color: gray;
+  background-color: rgb(205, 200, 200);
+  height: 600px;
+  width: 400px; 
+  border: 30px solid;">
+    <button id="btn" style="color: rgb(189, 148, 148);
+    background-color: rgb(229, 221, 221);
+    margin: 40px 50% 20px;
+    border: 2px solid silver;
+    padding:20px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 18px;
+    width: 200px;
+    box-shadow: 0 0 0 5px rgba(71, 63, 74, 0.458);">
+    الحديث التالي
+    </button>
+    <p style="text-align: right;
+    color: rgb(47, 46, 46);
+    padding: 10px;">
+    قال رسول اللَّه صلَّى اللَّه عليه وسلم     </p>
+    <p id="Quote" >
+    <span id="qSpan" style="color: rgb(116, 94, 94);
+    font-size: 70px;
+    text-align: right;">،،</span>
+    <span id="paragraph" style="font-size: 30px;
+    text-align: right;
+    padding: 0px;
+    margin: 10px 20px;
+    font-weight: bold;
+    color: rgb(39, 38, 38);">
+    أَبْرِدُوا بِالظُّهْرِ،فَِإِنَّ شِدَّةَ الحَرِّ مِنْ فَيْحِ جَهَنّمَ</span>
+    </p>
+    <p id="saidBy" style="color: rgb(102, 64, 50);
+    padding: 20px;
+    text-align: end;">
+    عن المغيرة بن شعبة
+    </p>
+  </div>
+  <script>
+    let myDiv = document.getElementById("div");
+      let myBtn = document.getElementById("btn");
+      let myQuote = document.getElementById("Quote");
+      let saider = document.getElementById("saidBy");
+      let mySpan = document.getElementById("qSpan");
+      let myParagraph = document.getElementById("paragraph");
+
+      var arrOfQuote = ["أَفْطَرَ الحَاجِمُ وَالمَحْجُومُ", "اللَّهُمَّ إِنَّكَ سألْتَنا مِنْ أنْفُسِنا مَا لَا نَمْلِكُهُ إلَّا بِكَ،فأعْطنا مِنْكَ مَا يُرْضِيكَ عَنَّا", "أُمِرْتُ أَن أُقاتلَ النَّاسَ حَتَّى يَشْهَدُوا أَن لَا إِلَه إلّا اللَّهُ وأنِّي رَسُولُ اللّهِ،فَإِذا قالُوها عَصَمُةا مِنِّي دِماءَهُمْ وأمْوَالهُمْ إلّا بِحَقِّها وحِسابُهُمْ على اللَّهِ", "امْسَحُوا عَلى الْخُفَّيْنِ"]
+      var arrOfSaider = ["عن ثوبان", "عن أبي هريرة", "عن أبي هريرة", "أحمد عن بلال"]
+
+      var i = 0;
+
+      myBtn.onclick = function () {
+
+        myParagraph.textContent = arrOfQuote[i];
+        saider.textContent = arrOfSaider[i];
+        i++;
+        if (i == (arrOfQuote.length) + 1) {
+          i = 0;
+          myParagraph.textContent = " أَبْرِدُوا بِالظُّهْرِ،فَِإِنَّ شِدَّةَ الحَرِّ مِنْ فَيْحِ جَهَنّمَ";
+          saider.textContent = "عن المغيرة بن شعبة";
+        };
+
+      };
+    
+
+  </script>
+</body>
+</html>
